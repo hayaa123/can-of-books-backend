@@ -17,8 +17,16 @@ app.get('/test', (request, response) => {
   response.send('test request received')
 
 })
+
+// app.get('/seed-data',(req,res)=>{
+//     seedBook();
+//     res.json({
+//         "message":"Author Object Created succefully"
+//     })
+
+// })
 app.get('/books',(req,res)=>{
-    // seedBook()
+    
     BookModel.find().then(data=>{
         res.json(data);
 })})

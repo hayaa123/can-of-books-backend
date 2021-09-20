@@ -10,8 +10,8 @@ const app = express();
 app.use(express.json())
 app.use(cors());
 mongoose.connect(`${MONGO_SERVER}/books`,{useNewUrlParser: true, useUnifiedTopology: true});
-// const PORT = process.env.PORT || 3001;
-const {BookModel , seedBook} = require('./Model/Book');
+
+const {seedBook} = require('./Model/Book');
 
 const booksRouter = require('./routers/books.router');
 
@@ -29,12 +29,7 @@ app.get('/test', (request, response) => {
 //     res.json({
 //         "message":"Author Object Created succefully"
 //     })
-
 // })
-// app.get('/books',(req,res)=>{
-    
-//     BookModel.find().then(data=>{
-//         res.json(data);
-// })})
+
 
 app.listen(PORT, () => console.log(`listening on ${PORT}`));

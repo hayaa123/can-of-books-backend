@@ -14,7 +14,8 @@ mongoose.connect(`${MONGO_ATLAS_SERVER}`, {
   useUnifiedTopology: true,
 });
 
-const { seedBook } = require("./Model/Book");
+
+// const { seedBook } = require("./Model/Book");
 
 const booksRouter = require("./routers/books.router");
 
